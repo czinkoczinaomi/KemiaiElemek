@@ -17,6 +17,9 @@ public class Kemia {
         for (int i = 1; i < sorok.size(); i++) {
             elemek.add(new Elem(sorok.get(i)));
         }
+        //3.feladat
+        System.out.println("3. feladat");
+        System.out.println("Elemek száma: "+elemek.size());
         
     }
     
