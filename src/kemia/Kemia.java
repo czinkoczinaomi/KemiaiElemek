@@ -21,6 +21,20 @@ public class Kemia {
         System.out.println("3. feladat");
         System.out.println("Elemek száma: "+elemek.size());
         
+         //4.feladat
+         int okorbanfelfedezett=0;
+         for (Elem elem : elemek)
+         {
+             if (elem.getFelfedezesKora().equals("Ókor"))
+             {
+                 okorbanfelfedezett++;
+                 
+             }
+            
+        }
+         System.out.println(okorbanfelfedezett);
+        
+        
     }
     
 }
