@@ -6,7 +6,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Kemia {
@@ -23,6 +25,7 @@ public class Kemia {
         System.out.println("Elemek száma: " + elemek.size());
 
         //4.feladat
+        System.out.println("3. feladat");
         int okorbanfelfedezett = 0;
         for (Elem elem : elemek) {
             if (elem.getFelfedezesKora().equals("Ókor")) {
@@ -68,10 +71,29 @@ public class Kemia {
             }
         }
         System.out.println("A legtöbb eltelt év: " + leghosszabbev);
-        
-        
-        
 
+        System.out.println("8. Feladat: Statisztika");
+        HashMap<String, Integer> statisztika = new HashMap<>();
+        for (Elem elem : elemek) {
+            String kulcs = elem.getFelfedezesKora();
+            if (!statisztika.containsKey(kulcs)) {
+                statisztika.put(kulcs, 1);
+
+            } else {
+                int ertek = statisztika.get(kulcs);
+                statisztika.put(kulcs, ++ertek);
+            }
+        }
+        
+        for (Map.Entry<String, Integer> entry : statisztika.entrySet()) {
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            if (value > 3 && !(key.equals("Ókor"))) {
+                System.out.println(key + " " + value + " db");
+            }
+            
+        }
+       
     }
 
 }
