@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Kemia {
 
@@ -33,6 +34,37 @@ public class Kemia {
             
         }
          System.out.println(okorbanfelfedezett);
+         
+         
+         //5.feladat
+         System.out.println("5.feladat");
+         Scanner sc=new Scanner(System.in);
+         String vegyjel="";
+         do {
+             vegyjel=sc.nextLine();
+        } while (vegyjel.length()>3);
+         System.out.println("vegyjel: "+vegyjel);
+         
+         
+         
+         //6.feladat
+         System.out.println("6.feladat");
+    
+         for (Elem elem : elemek)
+         {
+             
+             if (elem.getVegyJel().equalsIgnoreCase(vegyjel)) 
+             {
+                 System.out.println("a választott elem adatai");
+                 System.out.println(elem.toString());
+             }
+            
+        }
+        
+    
+         
+         
+         
         
         
     }
