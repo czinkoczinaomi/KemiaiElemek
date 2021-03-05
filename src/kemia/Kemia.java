@@ -46,8 +46,7 @@ public class Kemia {
          System.out.println("vegyjel: "+vegyjel);
          
          
-         
-         //6.feladat
+              //6.feladat
          System.out.println("6.feladat");
     
          for (Elem elem : elemek)
@@ -60,6 +59,7 @@ public class Kemia {
              }
             
         }
+    
         
     
          
